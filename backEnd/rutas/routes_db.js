@@ -1,17 +1,14 @@
 const express = require("express");
 let api = express.Router(),
   control = require("../controles/crud");
-  
-  
 
-api.get("/bingo", control.getDatos);
-api.post("/bingo", control.postDatos);
-api.put("/bingo", control.updateDatos);
-api.delete("/bingo", control.deleteDatos);
-api.get("/bingobyid", control.getDatosbyID);
+
+
+api.get("/data", control.getDatos);
+api.post("/data", control.postDatos);
+api.put("/data", control.updateDatos);
+api.delete("/data", control.deleteDatos);
+api.get("/datosbyid", control.getDatosbyID);
 api.post("/login", control.login);
-api.get("/bingo/jugar", control.numerosAleatorios);
-api.get("/bingo/cartillas", control.cartillas);
-
 
 module.exports = api;
